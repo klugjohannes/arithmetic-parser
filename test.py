@@ -22,5 +22,19 @@ class TreeOrderTestCase(unittest.TestCase):
         self.assertEqual(list(self.tree.inorder()), [2, 1, 4, 3, 5])
 
 
+def run_doctest():
+    import doctest
+    import evaluate
+
+    doctest.testmod(evaluate, verbose=True)
+
+
 if __name__ == '__main__':
+    print("Executing doctests")
+    print("==================")
+    run_doctest()
+
+    print("\n")
+    print("Executing unittests")
+    print("===================")
     unittest.main()
